@@ -54,7 +54,7 @@ Before running the project, ensure you have installed:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Salthof28/cfactor-image-processing-web.git
+git clone --recurse-submodules https://github.com/Salthof28/cfactor-image-processing-web.git
 cd cfactor-image-processing-web
 ```
 
