@@ -35,8 +35,8 @@ The application allows users to upload an image, process it asynchronously in th
 
 Detailed documentation for each project is available below:
 
-* [Frontend Documentation](./fe-cfactor-image-processing-web/README.md)
-* [Backend Documentation](./be-cfactor-image-processing-web/README.md)
+* [Frontend Documentation](https://github.com/Salthof28/fe-cfactor-image-processing-web)
+* [Backend Documentation](https://github.com/Salthof28/be-cfactor-image-processing-web)
 
 ---
 
