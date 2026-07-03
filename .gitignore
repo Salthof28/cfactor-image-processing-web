@@ -1,0 +1,37 @@
+**/.turbo
+**/.DS_Store
+
+# Dependencies
+**/node_modules
+
+# Build output
+**/.next
+**/dist
+**/build
+
+# Coverage
+**/coverage
+
+# Environment files
+**/.env
+**/.env.*
+
+# Logs
+**/*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+
+# IDE
+.vscode
+.idea
+
+# Turbopack / TypeScript
+**/*.tsbuildinfo
+
+# Docker
+docker-compose.override.yml

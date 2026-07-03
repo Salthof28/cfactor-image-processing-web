@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  # --- DATABASE IN-MEMORY (Redis) ---
+  redis:
+    image: redis:7-alpine 
+    container_name: cfactor-redis
+    ports:
+      - "6379:6379" # Port standar Redis
+    volumes:
+      - redis_data:/data 
+    restart: unless-stopped
+
+  # --- BACKEND CONTAINER (NestJS) ---
+  backend:
+    build:
+      context: ./be-cfactor-image-processing-web
+      dockerfile: Dockerfile
+    container_name: cfactor-backend
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+      - PORT=4000
+      - HOST_BULLMQ=redis
+      - PORT_BULLMQ=6379
+    depends_on:
+      - redis 
+
+  # --- FRONTEND CONTAINER (Next.js) ---
+  frontend:
+    build:
+      context: ./fe-cfactor-image-processing-web
+      dockerfile: Dockerfile
+    container_name: cfactor-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - API_BE=http://backend:4000
+    depends_on:
+      - backend
+
+volumes:
+  redis_data:
+    driver: local

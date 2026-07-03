@@ -1,0 +1,6 @@
+[submodule "be-cfactor-image-processing-web"]
+	path = be-cfactor-image-processing-web
+	url = https://github.com/Salthof28/be-cfactor-image-processing-web.git
+[submodule "fe-cfactor-image-processing-web"]
+	path = fe-cfactor-image-processing-web
+	url = https://github.com/Salthof28/fe-cfactor-image-processing-web.git
